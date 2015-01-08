@@ -66,6 +66,7 @@ public class AutoClicker extends Script implements Paintable {
     public void paint(Graphics graphics) {
         if(!loaded) {
             Point mouse = Mouse.getInstance().getPoint();
+            graphics.setColor(Color.CYAN);
             graphics.drawLine(mouse.x - 5, mouse.y, mouse.x + 5, mouse.y);
             graphics.drawLine(mouse.x, mouse.y - 5, mouse.x, mouse.y + 5);
             graphics.drawString(mouse.toString(), mouse.x - 10, mouse.y - 10);
